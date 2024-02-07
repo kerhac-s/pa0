@@ -1,0 +1,5 @@
+when compile nemu, I meet a error which is can not find readline/readline.h
+then I have find info on google, I need install some lib to fix this isses
+sudo apt-get install libreadline-dev 
+github token:
+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
