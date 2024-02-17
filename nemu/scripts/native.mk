@@ -42,7 +42,7 @@ run: run-env
 	@echo "Roger test point 001 end"
 	@echo $(NEMU_EXEC)
 	@echo "Roger test point 002 start"
-	@sh $(NEMU_EXEC)
+	$(NEMU_EXEC)
 	@echo "Roger test point 002 end"
 
 gdb: run-env
