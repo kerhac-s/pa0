@@ -40,6 +40,7 @@ run: run-env
 	@echo "Roger test point 001 middle"
 	@echo $(IMG)
 	@echo "Roger test point 001 end"
+	@echo $(NEMU_EXEC)
 	$(NEMU_EXEC)
 	@echo "Roger test point 002 start"
 
