@@ -41,6 +41,7 @@ run: run-env
 	@echo $(IMG)
 	@echo "Roger test point 001 end"
 	$(NEMU_EXEC)
+	@echo "Roger test point 002 start"
 
 gdb: run-env
 	$(call git_commit, "gdb NEMU")
