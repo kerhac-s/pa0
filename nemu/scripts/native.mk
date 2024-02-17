@@ -42,7 +42,7 @@ run: run-env
 	@echo "Roger test point 001 end"
 	@echo $(NEMU_EXEC)
 	@echo "Roger test point 002 start"
-	$(NEMU_EXEC) || $(info Roger test point 002 middle)
+	$(NEMU_EXEC)||echo "Roger test point 002 middle"
 	@echo "Roger test point 002 end"
 
 gdb: run-env
