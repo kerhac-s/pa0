@@ -37,6 +37,7 @@ run: run-env
 	$(call git_commit, "run NEMU")
 	@echo "Roger test point 001 start"
 	@echo $(ARGS)
+	@echo "Roger test point 001 middle"
 	@echo $(IMG)
 	@echo "Roger test point 001 end"
 	$(NEMU_EXEC)
