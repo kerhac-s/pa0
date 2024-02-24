@@ -123,7 +123,8 @@ void sdb_mainloop() {
 
 
     char *cmd = strtok(str, " ");
-    printf("'%s'\n",cmd);
+    // below function used to check what is the content of cmd string
+    printf("%s\n",cmd);
     size_t cmd_length = strlen(cmd);
     char *sub_str = str + cmd_length + 1;
     printf("'%s'\n",sub_str);
