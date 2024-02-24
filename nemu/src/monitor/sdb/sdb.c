@@ -120,7 +120,10 @@ void sdb_mainloop() {
     printf("below will print the whole line which readline get from stdin!\n");
     printf("'%s'\n",str);
     /* extract the first token as the command */
+
+
     char *cmd = strtok(str, " ");
+    printf("'%s'\n",cmd);
     if (cmd == NULL) { continue; }
 
     /* treat the remaining string as the arguments,
