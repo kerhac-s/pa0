@@ -56,9 +56,9 @@ static int cmd_si(char *args){
    
   printf("Cmd_si command print out\n");
   printf("Below is the cmd_si command's args: %s\n",args);
-  //uint64_t steps;
+  int steps = atoi(args);
   //steps = uint64_t(&args);
-  cpu_exec(1);
+  cpu_exec(steps);
   printf("One instruction has being executed by CPU\n");
   return 0;
 }
