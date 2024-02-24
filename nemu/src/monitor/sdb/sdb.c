@@ -52,9 +52,9 @@ static int cmd_q(char *args) {
   return -1;
 }
 
-static int cmd_si(char *args){
+static int cmd_si(char *args,int n){
   printf("Cmd_si command print out\n");
-  cpu_exec(10);
+  cpu_exec(n);
   printf("One instruction has being executed by CPU\n");
   return 0;
 }
@@ -64,7 +64,9 @@ static int cmd_help(char *args);
 static struct {
   const char *name;
   const char *description;
-  int (*handler) (char *);
+  int (*handler) (char *);  // *handler is a pointer who point to a function
+                            // char * , descripted the function has a char type 
+                            // pointer argument which handler pointed to
 } cmd_table [] = {
   { "help", "Display information about all supported commands", cmd_help },
   { "c", "Continue the execution of the program", cmd_c },
@@ -73,6 +75,9 @@ static struct {
   /* TODO: Add more commands */
 
 };
+
+//below marco defined in other file
+//#define ARRLEN(arr) (int)(sizeof(arr) / sizeof(arr[0]))
 
 #define NR_CMD ARRLEN(cmd_table)
 
