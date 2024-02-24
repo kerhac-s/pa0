@@ -52,9 +52,10 @@ static int cmd_q(char *args) {
   return -1;
 }
 
-static int cmd_si(char *args,int n){
+static int cmd_si(char *args){
+   
   printf("Cmd_si command print out\n");
-  cpu_exec(n);
+  cpu_exec(1);
   printf("One instruction has being executed by CPU\n");
   return 0;
 }
@@ -116,7 +117,8 @@ void sdb_mainloop() {
 
   for (char *str; (str = rl_gets()) != NULL; ) {
     char *str_end = str + strlen(str);
-
+    printf("below will print the whole line which readline get from stdin!\n");
+    printf("'%s'\n",str);
     /* extract the first token as the command */
     char *cmd = strtok(str, " ");
     if (cmd == NULL) { continue; }
