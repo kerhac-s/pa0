@@ -125,8 +125,8 @@ void sdb_mainloop() {
     char *cmd = strtok(str, " ");
     // below function used to check what is the content of cmd string
     printf("%s\n",cmd);
-    size_t cmd_length = strlen(cmd);
-    printf("there are %zu bytes in this command:%s \n", cmd_length,str);
+    unsigned int cmd_length = strlen(cmd);
+    printf("there are %d bytes in this command:%s \n", cmd_length,str);
     char *sub_str = str + cmd_length + 1;
     printf("'%s'\n",sub_str);
     if (cmd == NULL) { continue; }
