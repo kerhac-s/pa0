@@ -55,7 +55,7 @@ static int cmd_q(char *args) {
 static int cmd_si(char *args){
    
   printf("Cmd_si command print out\n");
-  printf("Below is the cmd_si command's args: %s",args);
+  printf("Below is the cmd_si command's args: %s\n",args);
   //uint64_t steps;
   //steps = uint64_t(&args);
   cpu_exec(1);
